@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rupanjan's portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div id="left">Rupanjan's portfolio</div>
+            <div id="right">
+                <ul id="container1">
+                    <li><a href="link1">Home</a></li>
+                    <li><a href="link2">About Me</a></li>
+                    <li><a href="link3">Projects</a></li>
+                    <li><a href="link4">Contact Me</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="firstsection">
+            <div id="leftsection">
+                Hello! I'm <span id="name">Rupanjan</span>
+                <div>And I want to become a</div>
+                <span id="element"></span>
+            </div>
+            <div id="rightsection">
+                <img src="developer.png">
+            </div>
+        </section>
+        <hr>
+        <br><br>
+        <section class="pastproject">
+            <div id="leftproject">
+                <img src="exp.png">
+            </div>
+            <div id="rightproject">
+                <span id="textgray">What I've done so far ... :)</span>
+                <div class="box">
+                    <div id="vertical">
+                        <img id="c" src="c.png">
+                        <div id="vertical-title">
+                            C-language
+                        </div>
+                        <div id="vertical_desc">
+                            This is the first programming language I've learnt. I have sound knowledge of C-programming language. I know the concepts of pointer, strings, functions, recursion, class etc. I have practised many questions in C. 
+                        </div>
+                    </div>
+                    <div id="vertical">
+                        <img id="cpp" src="cpp.png">
+                        <div id="vertical-title">
+                            C++-language
+                        </div>
+                        <div id="vertical_desc">
+                            Currently I'm learning C++. I want the knowlwdge of C++ for deep knowlwdge of data structures and algorithms.
+                        </div>
+                    </div>
+                    <div id="vertical">
+                        <img id="python" src="Python.png">
+                        <div id="vertical-title">
+                            Python-language
+                        </div>
+                        <div id="vertical_desc">
+                            Python is one of the most popular programming language in todays world. I have sound knowlwdge of this language. I have done basics of OOPS in python.
+                        </div>
+                    </div>
+                    <div id="vertical">
+                        <img id="html" src="html.webp">
+                        <div id="vertical-title">
+                            HTML
+                        </div>
+                        <div id="vertical_desc">
+                            HTML I've recently learnt. This is my first project on HTML.
+                        </div>
+                    </div>
+                    <div id="vertical">
+                        <img id="css" src="css.webp">
+                        <div id="vertical-title">
+                            CSS
+                        </div>
+                        <div id="vertical_desc">
+                            I am learning CSS. I have besic knowledge of CSS. But few concepts are there in which I have to work on myself.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div id="footer-box1">
+            <span id="textviolet">Rupanjan's portfolio</span>
+        </div>
+        <div id="footer-box2">
+            This is my first website which I have made using HTML and CSS<br><span>Thank you for visiting my website.. :)</span>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+          strings: ['Web Developer','Video Editor'],
+          typeSpeed: 50,
+        });
+    </script>
+</body>
+</html>
