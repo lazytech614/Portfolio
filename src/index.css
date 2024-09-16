@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    height: 100%;
+    background-color: #1c1c22;
+    color: white;
+    font-family: "JetBrains Mono", monospace;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.send-plane {
+    animation-name: infinity-flight;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    position: relative;
+}
+
+@keyframes infinity-flight {
+    0% {
+        transform: translateX(0) rotate(45deg);
+    }
+    100% {
+        transform: translateX(12px); 
+    }
+}
+
+.rotator{
+    animation-name: rotate;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0);
+    }100%{
+        transform: rotate(360deg);
+    }
+}
+
+.start.download-cv{
+    animation-name: banner;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+}
+
+@keyframes banner {
+    0%{
+        transform: translateX(0);
+    }100%{
+        transform: translateX(-100%);
+    }
+}
