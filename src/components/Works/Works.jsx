@@ -9,7 +9,7 @@ const Works = () => {
     <section id='works' className='relative min-h-[100vh] px-5 sm:px-10 md:px-20'>
       <div className='hidden sm:block absolute left-[50%] translate-x-[-50%] h-full w-[1px] bg-accent-default'></div>
       <div className='flex justify-center mb-[50px] mt-[80px]'>
-        <div className='text-[32px] sm:text-[52px] w-fit px-10 py-2 font-semibold  sm:border border-accent-default rounded-[100px] bg-transparent sm:bg-black z-[2] relative'>
+        <div className='text-[24px] sm:text-[32px] md:text-[52px]w-fit px-10 py-2 font-semibold  sm:border border-accent-default rounded-[100px] bg-transparent sm:bg-black z-[2] relative'>
             Latest Works
         </div>
       </div>

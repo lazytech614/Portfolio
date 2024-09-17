@@ -26,7 +26,7 @@ const Hero = () => {
                 <p className='relative intro-name text-accent-default'>Rupanjan De</p>
             </div>
             <p className='capitalize text-[14px] sm:text-[18px] md:text-[20px] lg:text-[24px]'>Full stack web developer</p>
-            <p ref={el} className='h-[70px] text-[12px] sm:text-[14px]'>I'm a full stack web developer and a fresher college student, passionate about building dynamic web applications. Eager to contribute to real-world projects and further enhance my skills.</p>
+            <p ref={el} className='min-h-[110px] sm:min-h-[70px] text-[12px] sm:text-[14px]'>I'm a full stack web developer and a fresher college student, passionate about building dynamic web applications. Eager to contribute to real-world projects and further enhance my skills.</p>
             <Social />
        </div> 
        <div className='relative h-[30%] md:h-fit md:w-[40%] flex justify-center mt-10 md:mt-0'>

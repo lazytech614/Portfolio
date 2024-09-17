@@ -35,7 +35,7 @@ const Connect = () => {
   return (
     <section id='connect' className='flex flex-col md:flex-row gap-20 my-20 px-5 sm:px-10 md:px-20'>
         <div className='md:w-[40%] flex flex-col gap-6'>
-            <p className='text-[32px] sm:text-[40px] text-accent-default font-semibold'>Let's connect</p>
+            <p className='text-[24px] sm:text-[32px] md:text-[52px] text-accent-default font-semibold'>Let's connect</p>
             <p className='text-[12px] sm:text-[14px]'>I'm currently available to take on new projects, so feel free to send me a message about anything that you want me to work on. You can connect anytime.</p>
             <div className='text-[10px] sm:text-[12px] flex flex-col gap-2'>
                 {connectLinks.map(link => <ConnectCard key={link.id} description={link.description} image={link.image} name={link.name}/>)}

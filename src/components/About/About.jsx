@@ -4,14 +4,14 @@ import { toolsUsed } from '../../constants/toolsUsed'
 
 const About = () => {
   return (
-    <section id='about' className='mb-40 px-5 sm:px-10 md:px-20'>
-        <div className='text-[32px] sm:text-[52px] font-semibold mb-10'>
+    <section id='about' className='mb-40 px-5 sm:px-10 md:px-20 overflow-hidden'>
+        <div className='text-[24px] sm:text-[32px] md:text-[52px] font-semibold mb-10'>
             About Me
         </div>
         <div className='relative flex flex-col-reverse lg:flex-row justify-between items-end'>
-            <div className=' lg:max-w-[50%] flex flex-col items-center gap-6 text-[11px] sm:text-[14px]'>
+            <div className='  lg:max-w-[50%] flex flex-col items-center gap-6 text-[10px] sm:text-[14px]'>
                 <div className='h-[300px]'>
-                <pre className='absolute left-0 top-0 text-accent-default'>
+                <pre className='max-w-[100vw] sm:max-w-auto overflow-hidden absolute left-0 top-0 text-accent-default'>
                     {`
 1.  <!DOCTYPE html>
 2.  <html>

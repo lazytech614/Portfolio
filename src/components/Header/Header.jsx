@@ -8,8 +8,8 @@ const Header = () => {
 
   return (
     <header id='header' className='fixed w-full top-0 z-[100] custom-backdrop flex justify-between items-center py-2 px-5 sm:px-10 md:px-20'>
-      <div className='text-[36px] relative cursor-pointer'>
-        Rupanjan<span className='text-accent-default text-[72px] absolute right-[-20px] bottom-[-16px]'>.</span>
+      <div className='text-[18px] sm:text-[36px] relative cursor-pointer'>
+        Rupanjan<span className='hidden text-accent-default text-[72px] absolute right-[-20px] bottom-[-16px]'>.</span>
       </div>
       <nav>
         <ul className='hidden md:flex items-center gap-6'>
@@ -27,7 +27,7 @@ const Header = () => {
                 Connect
             </a>
         </ul>
-        <div onClick={handleClick} className='md:hidden w-[30px] cursor-pointer text-white hover:text-accent-default transition-colors duration-100'>
+        <div onClick={handleClick} className='md:hidden w-[20px] sm:w-[30px] cursor-pointer text-white hover:text-accent-default transition-colors duration-100'>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={`${!isMobileNavOpen ? "block" : "hidden"}`}>
             <path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z"></path>
           </svg>

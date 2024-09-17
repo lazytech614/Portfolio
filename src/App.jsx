@@ -34,7 +34,7 @@ const App = () => {
     <div className=''>
       <Header/>
       <video className='fixed z-[-100] h-[100%] w-[100%] object-cover' src={backVideo} autoPlay muted loop/>
-      <div ref={gsapRef} id='video-cover' className='h-[100vh] w-full bg-black opacity-[0.6] fixed z-[-50]'></div>
+      <div ref={gsapRef} id='video-cover' className='h-[100%] w-full bg-black opacity-[0.6] fixed z-[-50]'></div>
       <Hero />
       <About />
       <Skills />
