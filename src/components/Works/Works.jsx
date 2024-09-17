@@ -41,7 +41,7 @@ const Works = () => {
         })}
       </div>
       <div className='flex justify-center'>
-        <a href='https://github.com/lazytech614' className='text-[12px] sm:text-[16px] w-fit px-4 sm:px-10 py-2 sm:py-4 font-semibold  border border-accent-default rounded-[100px] bg-black z-[2] relative mt-20 flex sm:gap-2 sm:hover:gap-4 duration-200'>
+        <a href='https://github.com/lazytech614' className='text-[12px] sm:text-[16px] w-fit px-4 sm:px-10 py-2 sm:py-4 font-semibold  border border-white rounded-[100px] bg-black z-[2] relative mt-20 flex sm:gap-2 sm:hover:gap-4 duration-200'>
             <span>See More</span>
             <svg className='w-[20px]' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M19.1642 12L12.9571 5.79291L11.5429 7.20712L16.3358 12L11.5429 16.7929L12.9571 18.2071L19.1642 12ZM13.5143 12L7.30722 5.79291L5.89301 7.20712L10.6859 12L5.89301 16.7929L7.30722 18.2071L13.5143 12Z"></path></svg>
         </a>
