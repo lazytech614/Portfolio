@@ -98,3 +98,9 @@ html{
         background-position: 0% 0%; /* Move to top left */
     }
 }
+
+@media (max-width: 640px) { /* Adjust the max-width as needed */
+    .skill-detail::before {
+      display: none; /* Hides the pseudo-element */
+    }
+  }
