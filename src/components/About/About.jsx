@@ -5,7 +5,7 @@ import { toolsUsed } from '../../constants/toolsUsed'
 const About = () => {
   return (
     <section id='about' className='mb-40 px-5 sm:px-10 md:px-20 overflow-hidden'>
-        <div className='text-[24px] sm:text-[32px] md:text-[52px] font-semibold mb-10'>
+        <div className='moving-grad text-[24px] sm:text-[32px] md:text-[52px] font-semibold mb-10'>
             About Me
         </div>
         <div className='relative flex flex-col-reverse lg:flex-row justify-between items-end'>

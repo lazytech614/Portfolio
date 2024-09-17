@@ -18,6 +18,9 @@ const MobileNav = ({isOpen}) => {
                     </div>
                 )
             })}
+            <a href='#connect' className='bg-accent-default border border-accent-default hover:border-white text-black text-[12px] sm:text-[18px] px-2 py-1 rounded-3xl font-semibold flex justify-center items-center'>
+                Connect
+            </a>
         </ul>
     </div>
   )

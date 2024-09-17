@@ -7,7 +7,29 @@ body{
     background-color: #1c1c22;
     color: white;
     font-family: "JetBrains Mono", monospace;
+    /* background-image: linear-gradient(rgb(145, 10, 103), rgb(218, 156, 201), rgb(60, 7, 83)); */
 }
+
+.moving-grad {
+    background-image: linear-gradient(90deg, #00ff99, #ffffff, #00ff99);
+    background-size: 200%; /* Double the size to create a visible sliding effect */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradient-slide 3s ease-in-out infinite alternate; /* Moves the gradient to and fro */
+}
+
+@keyframes gradient-slide {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%; /* Moves the gradient across the text */
+    }
+}
+
+
+
 
 html{
     scroll-behavior: smooth;
@@ -45,5 +67,34 @@ html{
         transform: rotate(0);
     }100%{
         transform: rotate(360deg);
+    }
+}
+
+.skill-detail::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    border-radius: 10px;
+    scale: 1.005;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(90deg, #00ff99, #00ccff, #ffdf00, #00ff99);
+    background-size: 200%;
+    animation: gradient-slide-diagonal 4s ease-in-out infinite;
+    opacity: 0; 
+    transition: opacity 0.2s ease-in-out; 
+}
+
+.skill-detail:hover::before {
+    opacity: 1; /* Gradually becomes visible */
+}
+
+
+@keyframes gradient-slide-diagonal {
+    0% {
+        background-position: 100% 100%; /* Start at bottom right */
+    }
+    100% {
+        background-position: 0% 0%; /* Move to top left */
     }
 }

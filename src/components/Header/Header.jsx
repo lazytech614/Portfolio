@@ -28,11 +28,11 @@ const Header = () => {
                     </div>
                 )
             })}
-            <a href='#connect' className='bg-accent-default hover:bg-black hover:text-white duration-200 border border-accent-default hover:border-white text-black text-[18px] px-6 py-2 rounded-3xl font-semibold flex justify-center items-center'>
+            <a href='#connect' className='bg-accent-default hover:bg-primary hover:text-white duration-200 border border-accent-default hover:border-white text-black text-[18px] px-6 py-2 rounded-3xl font-semibold flex justify-center items-center'>
                 Connect
             </a>
         </ul>
-        <div onClick={handleClick} className='md:hidden w-[20px] sm:w-[30px] cursor-pointer text-white hover:text-accent-default transition-colors duration-100'>
+        <div onClick={handleClick} className='md:hidden w-[20px] sm:w-[30px] cursor-pointer text-white sm:hover:text-accent-default transition-colors duration-100'>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={`${!isMobileNavOpen ? "block" : "hidden"}`}>
             <path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z"></path>
           </svg>
