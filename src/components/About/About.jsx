@@ -31,7 +31,7 @@ const About = () => {
                 </pre>
                 </div>
                 <div>
-                    <p className='mb-2'>Tools and technologies that I used are...</p>
+                    <p className='mb-2'>Tools and technologies that I use are...</p>
                     <div className='flex flex-wrap gap-2'>
                         {toolsUsed.map(tool => <div key={tool.id} className='p-2 bg-accent-default sm:hover:bg-primary sm:hover:text-white duration-200 cursor-pointer text-black text-[12px] rounded-lg'>#{tool.name}</div>)}
                     </div>

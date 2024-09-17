@@ -6,16 +6,10 @@ const Social = () => {
   const [isHovered, setIsHovered] = useState(false)
   return (
     <div className='flex flex-col sm:flex-row items-center gap-4'>
-        <button onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className='text-[12px] text-nowrap sm:text-[16px] flex items-center gap-2 border border-accent-default text-accent-default 
+        <button onClick={() => alert("Coming soon!")} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className='text-[12px] text-nowrap sm:text-[16px] flex items-center gap-2 border border-accent-default text-accent-default 
         px-6 sm:px-10 py-4 rounded-full'>
             <div className='max-w-[110px] overflow-hidden'>
-              <div className={`${isHovered ? "download-cv start" : "download-cv"}`}>
                 <span>Download CV </span>
-                <span>Download CV </span>
-                <span>Download CV </span>
-                <span>Download CV </span>
-                <span>Download CV </span>
-              </div>
             </div>
             <img className='w-[14px] sm:w-[20px]' src={downloadIcon} alt='' />
         </button>
