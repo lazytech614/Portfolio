@@ -13,50 +13,66 @@ export const toolsUsed = [
   },
   {
     id: 4,
-    name: "React.js",
+    name: "TypeScript",
   },
   {
     id: 5,
-    name: "Node.js",
+    name: "React.js",
   },
   {
     id: 6,
-    name: "Express.js",
+    name: "Node.js",
   },
   {
     id: 7,
-    name: "MongoDB",
+    name: "Express.js",
   },
   {
     id: 8,
-    name: "Mongoose",
+    name: "PostgreSQL",
   },
   {
     id: 9,
-    name: "EJS",
+    name: "MongoDB",
   },
   {
     id: 10,
-    name: "Bootstrap",
+    name: "Mongoose",
   },
   {
     id: 11,
-    name: "Tailwind",
+    name: "EJS",
   },
   {
     id: 12,
-    name: "Git",
+    name: "Bootstrap",
   },
   {
     id: 13,
-    name: "GitHub",
+    name: "Tailwind",
   },
   {
     id: 14,
-    name: "GSAP",
+    name: "Git",
   },
   {
     id: 15,
+    name: "GitHub",
+  },
+  {
+    id: 16,
+    name: "GSAP",
+  },
+  {
+    id: 17,
+    name: "LocomotiveScroll",
+  },
+  {
+    id: 18,
     name: "Figma",
+  },
+  {
+    id: 19,
+    name: "Stripe",
   },
 ];
