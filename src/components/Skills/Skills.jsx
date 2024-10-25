@@ -102,11 +102,11 @@ const Skills = () => {
             rotateY: rotateYFrontend,
             transformStyle: 'preserve-3d'
           }}
-          className="relative md:w-[50%] flex flex-col gap-2 mt-[-16px] rounded-[10px] cursor-default"
+          className="relative min-h-[300px] md:w-[50%] flex flex-col gap-2 mt-[-16px] rounded-[10px] cursor-default"
         >
           <div className='absolute -inset-0.5 bg-gradient-to-br from-accent-default to-violet-700 blur opacity-50 rounded-[10px]'></div>
           <div 
-            className="absolute inset-0 bg-black rounded-[10px] sm:p-6" 
+            className="absolute inset-0 bg-black rounded-[10px] p-6" 
             style={{ 
               transformStyle: 'preserve-3d',
               transform: 'translateZ(60px)'
@@ -132,7 +132,7 @@ const Skills = () => {
             rotateY: rotateYBackend,
             transformStyle: 'preserve-3d'
           }}
-          className="relative md:w-[50%] flex flex-col gap-2 rounded-[10px] cursor-default"
+          className="relative md:w-[50%] min-h-[300px] flex flex-col gap-2 rounded-[10px] cursor-default"
         >
           <div className='absolute -inset-0.5 bg-gradient-to-br from-accent-default to-violet-700 blur opacity-50 rounded-[10px]'></div>
           <div 
@@ -140,7 +140,7 @@ const Skills = () => {
               transformStyle: 'preserve-3d',
               transform: 'translateZ(80px)'
             }}
-            className='absolute inset-0 bg-black rounded-[10px] sm:p-6'>
+            className='absolute inset-0 bg-black rounded-[10px] p-6'>
             <p className="text-[24px] sm:text-[32px] md:text-[52px] font-semibold text-accent-default">
               Backend
             </p>
