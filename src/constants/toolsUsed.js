@@ -75,4 +75,8 @@ export const toolsUsed = [
     id: 19,
     name: "Stripe",
   },
+  {
+    id: 20,
+    name: "Socket.io",
+  },
 ];

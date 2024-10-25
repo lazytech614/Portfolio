@@ -10,7 +10,7 @@ const Resume = () => {
   }
   return (
     <section id='resume' className='min-h-[80vh] mb-40 px-5 sm:px-10 md:px-20'>
-        <div className='moving-grad text-[24px] sm:text-[32px] md:text-[52px] font-semibold mb-16'>
+        <div className='main-intro moving-grad text-[24px] sm:text-[32px] md:text-[52px] font-semibold mb-16'>
             Resume
         </div>
         <div className='flex flex-col md:flex-row justify-start gap-4 xl:gap-20'>

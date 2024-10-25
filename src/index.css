@@ -10,6 +10,28 @@ body{
     /* background-image: linear-gradient(rgb(145, 10, 103), rgb(218, 156, 201), rgb(60, 7, 83)); */
 }
 
+
+.main-intro{
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+    /* animation: animate 2s linear infinite alternate; */
+}
+
+.neon-text {
+    animation: animate 2s linear infinite alternate;
+}
+
+@keyframes animate {
+    0% {
+        color: #ffffff;
+        /* text-shadow: none; */
+        text-shadow: 0 0 5px #00ff99, 0 0 10px #00ff99, 0 0 15px;
+    }
+    100% {
+        color: #ffffff;
+        text-shadow: 0 0 5px #00ff99, 0 0 10px #00ff99, 0 0 15px #00ff99, 0 0 20px #00ff99, 0 0 25px #00ff99, 0 0 30px #00ff99, 0 0 35px #00ff99;
+    }
+}
+
 .moving-grad {
     background-image: linear-gradient(90deg, #00ff99, #ffffff, #00ff99);
     background-size: 200%; /* Double the size to create a visible sliding effect */

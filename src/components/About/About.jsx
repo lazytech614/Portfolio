@@ -5,8 +5,9 @@ import { toolsUsed } from '../../constants/toolsUsed'
 const About = () => {
   return (
     <section id='about' className='mb-40 px-5 sm:px-10 md:px-20 overflow-hidden'>
-        <div className='moving-grad text-[24px] sm:text-[32px] md:text-[52px] font-semibold mb-10'>
-            About Me
+        <div className='relative main-intro moving-grad text-[24px] sm:text-[32px] md:text-[52px] font-semibold mb-10'>
+            <div className=''>About Me</div>
+            {/* <div className='absolute bottom-0 bg-gradient-to-r from-accent-default to-violet-700 w-[100%] h-[0.5px]'></div> */}
         </div>
         <div className='relative flex flex-col-reverse lg:flex-row justify-between items-end'>
             <div className='  lg:max-w-[50%] flex flex-col items-center gap-6 text-[10px] sm:text-[14px]'>

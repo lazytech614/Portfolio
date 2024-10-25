@@ -67,8 +67,7 @@ const Connect = () => {
                     className='rounded-sm bg-[#27272c] outline-none border-none p-4'>
                 </textarea>
                 </div>
-                <button onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className='w-fit flex gap-2 items-center bg-accent-default sm:hover:bg-black text-black sm:hover:text-white duration-200 border border-accent-default sm:hover:border-white text-[12px] sm:text-[16px] lg:text-[20px] font-semibold px-6 sm:px-8 lg:px-10
-                py-2 lg:py-4 rounded-full'>
+                <button onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className='w-fit flex gap-2 items-center bg-accent-default sm:hover:bg-black text-black sm:hover:text-white duration-200 border border-accent-default sm:hover:border-white text-[12px] sm:text-[16px] lg:text-[20px] font-semibold px-6 sm:px-8 lg:px-10 py-2 lg:py-4 rounded-full'>
                     <span>Submit</span> 
                     <svg className='send-plane w-[16px] lg:w-[20px]' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill={`${isHovered && !isSmallScreen ? "white" : "black"}`}><path d="M1.94619 9.31543C1.42365 9.14125 1.41953 8.86022 1.95694 8.68108L21.0431 2.31901C21.5716 2.14285 21.8747 2.43866 21.7266 2.95694L16.2734 22.0432C16.1224 22.5716 15.8178 22.59 15.5945 22.0876L12 14L18 6.00005L10 12L1.94619 9.31543Z"></path></svg>
                 </button>
