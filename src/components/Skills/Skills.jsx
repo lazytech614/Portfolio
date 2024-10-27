@@ -28,6 +28,7 @@ const Skills = () => {
 
   const handleMouseMoveFrontend = (e) => {
     const rect = e.target.getBoundingClientRect();
+    // console.log(rect);
     const width = rect.width;
     const height = rect.height;
     const mouseX = e.clientX - rect.left;
