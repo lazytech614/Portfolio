@@ -17,7 +17,7 @@ const Works = () => {
         {projects.map((project, index) => {
           return (
             <div className='relative flex justify-between items-start sm:items-center' key={project.id}>
-              <a href={project.url} className='group hidden sm:block absolute left-[50%] -translate-x-1/2 w-[20px] h-[20px] rounded-[100%] border border-accent-default bg-black z-[20] hover:scale-[1.7] duration-200'>
+              <a href={project.url} target='_blank' className='group hidden sm:block absolute left-[50%] -translate-x-1/2 w-[20px] h-[20px] rounded-[100%] border border-accent-default bg-black z-[20] hover:scale-[1.7] duration-200'>
                 <p className='hidden group-hover:block absolute text-[6px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2'>click</p>
               </a>
               <div className='relative sm:w-[50%]'>
