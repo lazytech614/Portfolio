@@ -33,7 +33,7 @@ body{
 }
 
 .moving-grad {
-    background-image: linear-gradient(90deg, #00ff99, #ffffff, #00ff99);
+    background-image: linear-gradient(90deg, #00ff99, #ffffff, violet, #00ccff, #ffdf00, #00ff99);
     background-size: 200%; /* Double the size to create a visible sliding effect */
     background-clip: text;
     -webkit-background-clip: text;
@@ -125,4 +125,9 @@ html{
     .skill-detail::before {
       display: none; /* Hides the pseudo-element */
     }
+
+    pre {
+        white-space: pre-wrap;
+        word-break: break-word;
+      }
   }

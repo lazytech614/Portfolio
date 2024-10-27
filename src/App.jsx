@@ -33,7 +33,7 @@ const App = () => {
       scrollTrigger: {
         trigger: gsapRef.current,
         scroller: "body",
-        start: "top top",
+        start: "top middle",
         end: "bottom top",
         scrub: true,
       }
@@ -41,14 +41,7 @@ const App = () => {
   }, []);
 
   return (
-    <div onMouseMove={handleMouseMove}>
-      {/* <div 
-        style={{ top: `${y}px`, left: `${x}px`}} 
-        className='fixed -translate-y-1/2 h-[20px] w-[20px] rounded-full bg-transparent border border-white flex justify-center items-center'
-      >
-        <div className='h-[5px] w-[5px] rounded-full bg-white'></div>
-      </div> */}
-      
+    <div onMouseMove={handleMouseMove}>      
       <Header/>
       <video className='fixed z-[-100] h-[120vh] w-[100%] object-cover' src={backVideo} autoPlay muted loop/>
       <div ref={gsapRef} id='video-cover' className='h-[100%] w-full bg-black opacity-[0.6] fixed z-[-50]'></div>
