@@ -21,10 +21,10 @@ const Skills = () => {
   const mouseYSpringBackend = useSpring(yBackend);
 
   // Separate transformations for each section
-  const rotateXFrontend = useTransform(mouseYSpringFrontend, [-0.5, 0.5], ["5deg", "-5deg"]);
-  const rotateYFrontend = useTransform(mouseXSpringFrontend, [-0.5, 0.5], ["-5deg", "5deg"]);
-  const rotateXBackend = useTransform(mouseYSpringBackend, [-0.5, 0.5], ["5deg", "-5deg"]);
-  const rotateYBackend = useTransform(mouseXSpringBackend, [-0.5, 0.5], ["-5deg", "5deg"]);
+  const rotateXFrontend = useTransform(mouseYSpringFrontend, [-0.5, 0.5], ["10deg", "-10deg"]);
+  const rotateYFrontend = useTransform(mouseXSpringFrontend, [-0.5, 0.5], ["-10deg", "10deg"]);
+  const rotateXBackend = useTransform(mouseYSpringBackend, [-0.5, 0.5], ["10deg", "-10deg"]);
+  const rotateYBackend = useTransform(mouseXSpringBackend, [-0.5, 0.5], ["-10deg", "10deg"]);
 
   const handleMouseMoveFrontend = (e) => {
     const rect = e.target.getBoundingClientRect();
@@ -102,7 +102,7 @@ const Skills = () => {
             rotateY: rotateYFrontend,
             transformStyle: 'preserve-3d'
           }}
-          className="relative min-h-[300px] md:w-[50%] flex flex-col gap-2 mt-[-16px] rounded-[10px] cursor-default"
+          className="relative min-h-[360px] md:w-[50%] flex flex-col gap-2 mt-[-16px] rounded-[10px] cursor-default"
         >
           <div className='absolute -inset-0.5 bg-gradient-to-br from-accent-default to-violet-700 blur opacity-50 rounded-[10px]'></div>
           <div 
@@ -132,7 +132,7 @@ const Skills = () => {
             rotateY: rotateYBackend,
             transformStyle: 'preserve-3d'
           }}
-          className="relative md:w-[50%] min-h-[300px] flex flex-col gap-2 rounded-[10px] cursor-default"
+          className="relative md:w-[50%] min-h-[360px] flex flex-col gap-2 rounded-[10px] cursor-default"
         >
           <div className='absolute -inset-0.5 bg-gradient-to-br from-accent-default to-violet-700 blur opacity-50 rounded-[10px]'></div>
           <div 

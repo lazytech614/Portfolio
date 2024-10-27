@@ -1,5 +1,5 @@
 import React from 'react'
-import about from '/about.avif'
+import about from '/about.webp'
 import { toolsUsed } from '../../constants/toolsUsed'
 
 const About = () => {
@@ -10,9 +10,9 @@ const About = () => {
             {/* <div className='absolute bottom-0 bg-gradient-to-r from-accent-default to-violet-700 w-[100%] h-[0.5px]'></div> */}
         </div>
         <div className='relative flex flex-col-reverse lg:flex-row justify-between items-end'>
-            <div className='  lg:max-w-[50%] flex flex-col items-center gap-6 text-[10px] sm:text-[14px]'>
-                <div className='h-[300px]'>
-                <pre className='max-w-[100vw] sm:max-w-auto overflow-hidden absolute left-0 top-0 text-accent-default'>
+            <div className='lg:max-w-[50%] flex flex-col items-center gap-6 text-[10px] sm:text-[14px]'>
+                <div className='h-[300px] '>
+                <pre className=' max-w-[100vw] sm:max-w-auto overflow-hidden absolute left-0 top-0 text-accent-default'>
                     {`
 1.  <!DOCTYPE html>
 2.  <html>
