@@ -39,7 +39,7 @@ const About = () => {
                 </div>
             </div>
             <div className='hidden lg:block'>
-                <img className='w-[500px]' src={about} alt='' />
+                <img className='w-[400px]' src={about} alt='' />
             </div>
         </div>
     </section>
