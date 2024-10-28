@@ -125,7 +125,9 @@ html{
     .skill-detail::before {
       display: none; /* Hides the pseudo-element */
     }
+  }
 
+  @media (max-width: 768px) {
     pre {
         white-space: pre-wrap;
         word-break: break-word;

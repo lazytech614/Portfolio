@@ -23,7 +23,7 @@ const Hero = () => {
     <section id="home" className='h-[100vh] flex flex-col-reverse md:flex-row items-center px-5 sm:px-10 md:px-20 overflow-hidden'>
        <div className='h-[60%] md:h-fit md:w-[60%] flex flex-col justify-center items-center md:items-start text-center md:text-left gap-6'>
             <div className='text-[32px] sm:text-[44px] md:text-[52px] lg:text-[64px] xl:text-[72px] leading-[36px] sm:leading-[46px] md:leading-[60px] lg:leading-[74px] font-semibold'>
-                <p className=''>Hello I'm</p>
+                <p className=''><span>Hello</span> I'm</p>
                 <p className='relative text-accent-default'>Rupanjan De</p>
             </div>
             <p className='capitalize text-[14px] sm:text-[18px] md:text-[20px] lg:text-[24px]'>Full stack web developer</p>

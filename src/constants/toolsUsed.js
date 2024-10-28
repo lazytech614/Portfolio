@@ -1,12 +1,12 @@
 export const toolsUsed = [
-  {
-    id: 1,
-    name: "HTML",
-  },
-  {
-    id: 2,
-    name: "CSS",
-  },
+  // {
+  //   id: 1,
+  //   name: "HTML",
+  // },
+  // {
+  //   id: 2,
+  //   name: "CSS",
+  // },
   {
     id: 3,
     name: "JavaScript",
@@ -35,10 +35,10 @@ export const toolsUsed = [
     id: 9,
     name: "MongoDB",
   },
-  {
-    id: 10,
-    name: "Mongoose",
-  },
+  // {
+  //   id: 10,
+  //   name: "Mongoose",
+  // },
   {
     id: 11,
     name: "EJS",
@@ -67,10 +67,10 @@ export const toolsUsed = [
     id: 17,
     name: "LocomotiveScroll",
   },
-  {
-    id: 18,
-    name: "Figma",
-  },
+  // {
+  //   id: 18,
+  //   name: "Figma",
+  // },
   {
     id: 19,
     name: "Stripe",

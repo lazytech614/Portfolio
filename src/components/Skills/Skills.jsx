@@ -81,7 +81,7 @@ const Skills = () => {
       </div>
 
       {/* Frontend Skills Section */}
-      <div className="relative flex flex-col-reverse md:flex-row justify-between gap-10">
+      <div className="relative flex flex-col-reverse md:flex-row-reverse justify-between gap-10">
         <div
           ref={frontendContainerRef}
           className="md:w-[50%] flex flex-col gap-10 h-[400px] overflow-y-auto scrollbar-hide"
@@ -90,7 +90,7 @@ const Skills = () => {
           {frontendSkills.map(skill => (
             <SkillCard key={skill.id} skill={skill} />
           ))}
-          <div onClick={() => scrollToBottom(frontendContainerRef)} className="absolute flex gap-2 px-4 py-2 right-0 md:right-auto md:left-[36%] rounded-xl bottom-[-46px] bg-accent-default text-black text-[12px] sm:text-[16px] cursor-pointer">
+          <div onClick={() => scrollToBottom(frontendContainerRef)} className="absolute flex gap-2 px-4 py-2 right-0 md:left-auto md:right-[36%] rounded-xl bottom-[-46px] bg-accent-default text-black text-[12px] sm:text-[16px] cursor-pointer">
             <p>scroll down</p>
             <img className="w-[20px]" src={arrowDown} alt="arrow down" />
           </div>
@@ -124,7 +124,7 @@ const Skills = () => {
       </div>
 
       {/* Backend Skills Section */}
-      <div className="relative flex flex-col md:flex-row justify-between gap-10 mt-20">
+      <div className="relative flex flex-col md:flex-row-reverse justify-between gap-10 mt-[120px]">
         <motion.div
           onMouseMove={handleMouseMoveBackend}
           onMouseLeave={handleMouseLeaveBackend}
@@ -158,7 +158,7 @@ const Skills = () => {
           {backendSkills.map(skill => (
             <SkillCard key={skill.id} skill={skill} />
           ))}
-          <div onClick={() => scrollToBottom(backendContainerRef)} className="absolute flex gap-2 px-4 py-2 right-0 md:right-[36%] rounded-xl bottom-[-46px] bg-accent-default text-black text-[12px] sm:text-[16px] cursor-pointer">
+          <div onClick={() => scrollToBottom(backendContainerRef)} className="absolute flex gap-2 px-4 py-2 right-0 md:left-[36%] md:right-auto rounded-xl bottom-[-46px] bg-accent-default text-black text-[12px] sm:text-[16px] cursor-pointer">
             <p>scroll down</p>
             <img className="w-[20px]" src={arrowDown} alt="arrow down" />
           </div>
