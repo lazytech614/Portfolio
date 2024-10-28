@@ -140,7 +140,7 @@ const About = () => {
                 <div>
                     <p className='mb-2 text-[10px] sm:text-[12px]'>Tools and technologies that I use are...</p>
                     <div className='flex flex-wrap gap-2'>
-                        {toolsUsed.map(tool => <div key={tool.id} className={`p-2 bg-accent-default sm:hover:bg-primary sm:hover:text-white duration-200 cursor-pointer text-black text-[10px] sm:text-[12px] rounded-lg`}>#{tool.name}</div>)}
+                        {toolsUsed.map(tool => <div key={tool.id} className={`p-2 bg-accent-default sm:hover:bg-primary sm:hover:text-white duration-200 cursor-default text-black text-[10px] sm:text-[12px] rounded-lg`}>#{tool.name}</div>)}
                     </div>
                 </div>
             </div>
