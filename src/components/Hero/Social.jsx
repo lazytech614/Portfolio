@@ -7,10 +7,14 @@ const Social = () => {
 
   const isSmallScreen = useMediaQuery({ query: '(max-width: 640px)' });
 
+  const handleDownloadCvClick = () => {
+    window.open("/Resume.pdf", "_blank");
+  }
+
   return (
     <div className='flex flex-col sm:flex-row items-center gap-4'>
       <button
-        onClick={() => alert('Coming soon!')}
+        onClick={handleDownloadCvClick}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         className='text-[12px] text-nowrap sm:text-[16px] flex items-center gap-2 border sm:hover:bg-accent-default sm:hover:text-black duration-200 border-accent-default text-accent-default 
