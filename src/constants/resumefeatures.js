@@ -8,6 +8,7 @@ import js from "/js.jpg";
 import tail from "/tailwind.png";
 import boot from "/bootstrap.png";
 import typescript from "/typescript.png";
+import nextJs from "/nextJs.png";
 import { Link } from "react-router-dom";
 
 export const resumeFeatures = [
@@ -92,6 +93,11 @@ export const resumeFeatures = [
         id: 10,
         type: "Typescript",
         image: typescript,
+      },
+      {
+        id: 11,
+        type: "NextJs",
+        image: nextJs,
       },
     ],
   },

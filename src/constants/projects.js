@@ -6,8 +6,45 @@ import project5 from "../../public/project5.png";
 import project6 from "../../public/chat-app.png";
 import project7 from "../../public/note-sphere.png";
 import project8 from "../../public/quiz-app.png";
+import shopZone from "../../public/ShopZone.png";
+import cpTracker from "../../public/CPTracker.png";
 
 export const projects = [
+  {
+    id: 9,
+    name: "CP Tracker",
+    description:
+      "CP Tracker is a Next.js web application that helps you in analysing and tracking your progress in competitive programming in different platforms like LeetCode, CodeForces, Codechef etc.",
+    techs: [
+      "NextJs",
+      "Typescript",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "Prisma",
+      "Shadcn",
+      "NextAuth",
+    ],
+    image: cpTracker,
+    url: "https://cp-tracker-xi.vercel.app/",
+  },
+  {
+    id: 8,
+    name: "ShopZone",
+    description:
+      "A comprehensive SaaS solution for managing multiple e-commerce stores through a single dashboard. Built with modern web technologies for optimal performance and developer experience.",
+    techs: [
+      "NextJs",
+      "Typescript",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "Prisma",
+      "Shadcn",
+      "Clerk",
+      "Stripe",
+    ],
+    image: shopZone,
+    url: "https://shop-zone-admin.vercel.app/",
+  },
   {
     id: 7,
     name: "Note Sphere",

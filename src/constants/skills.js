@@ -21,16 +21,21 @@ export const frontendSkills = [
   },
   {
     id: 5,
+    skill: "NextJs",
+    meterRate: "85",
+  },
+  {
+    id: 6,
     skill: "Tailwind CSS",
     meterRate: "75",
   },
   {
-    id: 6,
+    id: 7,
     skill: "EJS",
     meterRate: "70",
   },
   {
-    id: 7,
+    id: 8,
     skill: "Bootstrap",
     meterRate: "80",
   },
