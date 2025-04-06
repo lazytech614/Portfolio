@@ -8,7 +8,7 @@ const Social = () => {
   const isSmallScreen = useMediaQuery({ query: '(max-width: 640px)' });
 
   const handleDownloadCvClick = () => {
-    window.open("/Resume.pdf", "_blank");
+    window.open("/RUPANJAN_DE_RESUME.pdf", "_blank");
   }
 
   return (
