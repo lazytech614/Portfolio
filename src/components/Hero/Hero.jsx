@@ -1,5 +1,5 @@
 import React, {useRef, useEffect} from 'react'
-import profile from '/profile-modified.png'
+import profile from '/my-profile-modified.png'
 import mobileProfile from '/mobile-profile-pic.png'
 import Social from './Social'
 import Typed from 'typed.js';
