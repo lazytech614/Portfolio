@@ -1,6 +1,7 @@
 import React, {useRef, useEffect} from 'react'
 import profile from '/my-profile-modified.png'
-import mobileProfile from '/mobile-profile-pic.png'
+// import mobileProfile from '/mobile-profile-pic.png'
+import mobileProfile from '/my-profile-modified.png'
 import Social from './Social'
 import Typed from 'typed.js';
 import backCircle from '/backCircle2.png'
