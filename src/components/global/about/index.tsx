@@ -176,7 +176,7 @@ const About = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            // viewport={{ once: true }}
             className="relative"
           >
             <Card className="overflow-hidden bg-gray-900 border-0 shadow-2xl">
@@ -268,7 +268,7 @@ const About = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          // viewport={{ once: true }}
           className="mb-20"
         >
           <motion.div variants={itemVariants} className="text-center mb-12">
@@ -315,7 +315,7 @@ const About = () => {
                               initial={{ width: 0 }}
                               whileInView={{ width: `${skill.meterRate}%` }}
                               transition={{ duration: 1, delay: skillIndex * 0.1 }}
-                              viewport={{ once: true }}
+                              // viewport={{ once: true }}
                             />
                           </div>
                         </div>
@@ -333,7 +333,7 @@ const About = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          // viewport={{ once: true }}
         >
           <motion.div variants={itemVariants} className="text-center mb-12">
             <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -351,7 +351,7 @@ const About = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.05, duration: 0.3 }}
-                viewport={{ once: true }}
+                // viewport={{ once: true }}
                 whileHover={{ scale: 1.05, y: -2 }}
                 className="px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium shadow-sm hover:shadow-md transition-all duration-300 cursor-default"
               >
