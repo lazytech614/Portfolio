@@ -138,7 +138,7 @@ const Hero = () => {
                 👋
               </motion.span>
               <span className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 font-medium">
-                Hello, I'm
+                Hello, I&apos;m
               </span>
             </motion.div>
 
@@ -162,7 +162,7 @@ const Hero = () => {
               className="h-12 sm:h-14 md:h-16 flex items-center justify-center lg:justify-start"
             >
               <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700 dark:text-gray-200 font-semibold">
-                I'm a{' '}
+                I&apos;m a{' '}
                 <motion.span
                   key={currentRole}
                   initial={{ opacity: 0, y: 20 }}
@@ -341,8 +341,8 @@ const Hero = () => {
               className="absolute top-10 sm:top-20 -left-5 sm:-left-10 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-2 sm:p-4 text-xs font-mono border border-gray-200 dark:border-gray-700 opacity-80 hidden sm:block"
             >
               <div className="text-blue-600 dark:text-blue-400">const dev = {`{`}</div>
-              <div className="text-gray-600 dark:text-gray-300 ml-2">name: "Rupanjan",</div>
-              <div className="text-gray-600 dark:text-gray-300 ml-2">skills: ["React", "Node.js"]</div>
+              <div className="text-gray-600 dark:text-gray-300 ml-2">name: &quot;Rupanjan&quot;,</div>
+              <div className="text-gray-600 dark:text-gray-300 ml-2">skills: [&quot;React&quot;, &quot;Node.js&quot;]</div>
               <div className="text-blue-600 dark:text-blue-400">{`}`}</div>
             </motion.div>
 
