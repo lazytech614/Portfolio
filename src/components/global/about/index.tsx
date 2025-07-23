@@ -133,9 +133,9 @@ const About = () => {
               
               <div className="space-y-4 text-gray-600 dark:text-gray-300 leading-relaxed">
                 <p>
-                  Hello! I'm a <strong className="text-blue-600 dark:text-blue-400">motivated full-stack web developer</strong> from 
+                  Hello! I&apos;m a <strong className="text-blue-600 dark:text-blue-400">motivated full-stack web developer</strong> from 
                   Roorkee, India. Currently pursuing my studies at <strong className="text-purple-600 dark:text-purple-400">IIT Roorkee</strong>, 
-                  I'm passionate about building efficient, responsive, and user-friendly web applications.
+                  I&apos;m passionate about building efficient, responsive, and user-friendly web applications.
                 </p>
                 
                 <p>
@@ -145,7 +145,7 @@ const About = () => {
                 </p>
                 
                 <p>
-                  When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, 
+                  When I&apos;m not coding, you can find me exploring new technologies, contributing to open-source projects, 
                   or sharing knowledge with the developer community.
                 </p>
               </div>
@@ -233,7 +233,7 @@ const About = () => {
                     <div>
                       <span className="text-gray-500">9. </span>
                       <span className="text-green-400">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div </span>
-                      <span className="text-orange-400">class="skills"</span>
+                      <span className="text-orange-400">class=&quot;skills&quot;</span>
                       <span className="text-green-400">&gt;</span>
                     </div>
                     <div>

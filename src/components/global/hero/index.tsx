@@ -40,7 +40,7 @@ const Hero = () => {
         >
           <motion.div variants={itemVariants} className="space-y-4">
             <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white">
-              Hi, I'm{' '}
+              Hi, I&apos;m{' '}
               <span className="gradient-text">Rupanjan</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
