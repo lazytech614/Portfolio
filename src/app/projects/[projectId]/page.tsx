@@ -159,8 +159,6 @@ const projectsData = [
     image: '/images/03_shop_zone_admin/image1.png',
     images: [
       '/images/03_shop_zone_admin/image1.png',
-      '/images/03_shop_zone_admin/image2.png',
-      '/images/03_shop_zone_admin/image3.png',
     ],
     technologies: [
       { name: 'Next.js', category: 'Frontend Framework' },
@@ -476,7 +474,7 @@ const ProjectDetails = () => {
 
                       {/* Image Thumbnails */}
                       <div className="flex space-x-4 justify-center">
-                        {project.images.map((image, index) => (
+                        {project.images.length > 1 && project.images.map((image, index) => (
                           <motion.button
                             key={index}
                             onClick={() => setSelectedImage(index)}
