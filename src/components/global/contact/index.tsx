@@ -74,7 +74,7 @@ const Contact = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-10%" }}
+          viewport={{ margin: "-10%" }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-center mb-12 sm:mb-16"
         >
@@ -92,7 +92,7 @@ const Contact = () => {
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-10%" }}
+              viewport={{ margin: "-10%" }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
               className="w-full lg:w-5/12 flex-shrink-0"
             >

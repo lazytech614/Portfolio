@@ -117,7 +117,7 @@ const Hero = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="space-y-6 md:space-y-8 text-center lg:text-left order-2 lg:order-1"
+            className="space-y-4 sm:space-y-6 md:space-y-8 text-center lg:text-left order-2 lg:order-1"
           >
             {/* Greeting */}
             <motion.div
@@ -181,7 +181,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 px-4 lg:px-0"
+              className="text-sm sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 px-4 lg:px-0"
             >
               Passionate about creating beautiful, functional digital experiences that make a difference. 
               Currently pursuing my studies at <span className="font-semibold text-blue-600 dark:text-blue-400">IIT Roorkee</span>.
@@ -207,7 +207,7 @@ const Hero = () => {
             >
               <Button 
                 size="lg"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform text-sm sm:text-base"
               >
                 <Link href="#projects" className="flex items-center space-x-2">
                   <span>View My Work</span>
@@ -218,7 +218,7 @@ const Hero = () => {
               <Button 
                 variant="outline"
                 size="lg"
-                className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
+                className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full transition-all duration-300 transform text-sm sm:text-base"
               >
                 <Download className="w-4 h-4 mr-2 flex-shrink-0" />
                 <span className="whitespace-nowrap">Download Resume</span>

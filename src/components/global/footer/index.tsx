@@ -11,13 +11,13 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-gray-900 text-white py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center space-y-8"
+          className="text-center space-y-4"
         >
           <div className="flex justify-center space-x-6">
             {socialLinks.map((link, index) => (
@@ -34,11 +34,8 @@ const Footer = () => {
             ))}
           </div>
           
-          <div className="border-t border-gray-800 pt-8">
-            <p className="text-gray-400 flex items-center justify-center">
-              Made with 💖 by Rupanjan De
-            </p>
-            <p className="text-gray-400 mt-2">
+          <div className="border-t border-gray-800">
+            <p className="text-gray-400 mt-4 text-xs">
               © {new Date().getFullYear()} All rights reserved.
             </p>
           </div>
