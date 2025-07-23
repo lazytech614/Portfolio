@@ -358,7 +358,7 @@ const About = () => {
                       transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                       className="absolute -top-4 -right-4 bg-blue-500 text-white p-2 rounded-lg shadow-lg text-xs font-mono hidden sm:block"
                     >
-                      console.log("Hello World!");
+                      console.log(&quot;Hello World!&quot;);
                     </motion.div>
                     
                     <motion.div
