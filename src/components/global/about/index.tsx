@@ -123,7 +123,7 @@ const About = () => {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            // viewport={{ once: true }}
             className="space-y-8"
           >
             <motion.div variants={itemVariants} className="space-y-6">
