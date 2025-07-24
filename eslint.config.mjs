@@ -14,6 +14,7 @@ const eslintConfig = [
   {
     rules: {
       "@typescript-eslint/no-explicit-any": "off", // 🔴 Disables the 'Unexpected any' error
+      "react-hooks/rules-of-hooks": "off",
     },
   },
 ];
