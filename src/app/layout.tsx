@@ -4,6 +4,7 @@ import './globals.css'
 import Header from '@/components/layout/header'
 import Footer from '@/components/layout/footer'
 import ScrollProgress from '@/components/global/scroll-progress'
+import { Toaster } from '@/components/ui/sonner'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,6 +24,7 @@ export default function RootLayout({
         <ScrollProgress />
         <Header />
         <main>{children}</main>
+        <Toaster />
         <Footer />
       </body>
     </html>
