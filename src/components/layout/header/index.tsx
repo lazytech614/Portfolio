@@ -25,7 +25,7 @@ const Header = () => {
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 w-full z-[99999999] transition-all duration-300 ${
         scrolled
           ? 'bg-background/80 backdrop-blur-md border-b border-border'
           : 'bg-transparent'

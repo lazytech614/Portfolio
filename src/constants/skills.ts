@@ -16,7 +16,7 @@ export const TECH_ICONS = {
   "Node JS": "/icons/nodejs.svg",
   "React": "/icons/react.svg",
   "MongoDB": "/icons/mongodb.svg",
-  "JWT": "/icons/jwt.svg",
+  "Prisma ORM": "/icons/prisma.svg",
   "PostgreSQL": "/icons/postgresql.svg",
   "TypeScript": "/icons/typescript.svg",
   "Docker": "/icons/docker.svg"
@@ -31,7 +31,7 @@ export const TECHNOLOGIES = [
   { name: "TypeScript", icon: TECH_ICONS["TypeScript"] },
   { name: "Express JS", icon: TECH_ICONS["Express JS"] },
   { name: "Node JS", icon: TECH_ICONS["Node JS"] },
-  { name: "JWT", icon: TECH_ICONS["JWT"] },
+  { name: "Prisma ORM", icon: TECH_ICONS["Prisma ORM"] },
   { name: "Docker", icon: TECH_ICONS["Docker"] },
   { name: "MongoDB", icon: TECH_ICONS["MongoDB"] },
   { name: "PostgreSQL", icon: TECH_ICONS["PostgreSQL"] }
