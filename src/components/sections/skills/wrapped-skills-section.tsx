@@ -68,7 +68,7 @@ export default function WrappedSkillsSection({ title, index = 0 }: WrappedSkills
       id="skills-grid"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
+      // viewport={{ once: true }}
       transition={{ duration: 0.6, delay: index * 0.2 }}
       className="py-16 px-6 bg-gray-900"
     >
@@ -93,7 +93,7 @@ export default function WrappedSkillsSection({ title, index = 0 }: WrappedSkills
               variants={itemVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              // viewport={{ once: true }}
               whileHover={{ scale: 1.03, y: -4 }}
               className="relative w-[140px]"
             >

@@ -213,8 +213,8 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="mb-12"
           >
-            <motion.h1 
-              className="text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-tight"
+            <motion.h1
+              className="flex flex-wrap justify-center items-baseline text-center text-6xl md:text-8xl lg:text-9xl font-bold leading-tight mb-8"
               style={{
                 x: useTransform(smoothMouseX, [-100, 100], [-5, 5]),
               }}
@@ -223,12 +223,12 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.7, ease: "easeOut" }}
-                className="inline-block"
+                className="mr-3"
               >
-                Hi, I&apos;m{' '}
+                Hi, I&apos;m
               </motion.span>
-              <motion.span 
-                className="gradient-text relative inline-block bg-red-500"
+              <motion.span
+                className="gradient-text relative"
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.9, ease: "easeOut" }}
@@ -286,7 +286,7 @@ const Hero = () => {
                   x: useTransform(smoothMouseX, [-100, 100], [3, -3]),
                 }}
               >
-                Frontend Developer
+                Full Stack Developer
               </motion.h2>
             </motion.div>
 

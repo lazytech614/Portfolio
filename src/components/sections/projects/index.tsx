@@ -34,7 +34,7 @@ const Projects = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          // viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -51,7 +51,7 @@ const Projects = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          // viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {PROJECTS.map((project, index) => (
@@ -178,7 +178,7 @@ const Projects = () => {
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    // viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
                     <CardTitle className="mb-3 group-hover:text-primary transition-colors duration-300 text-xl">
@@ -196,7 +196,7 @@ const Projects = () => {
                           key={tech}
                           initial={{ opacity: 0, scale: 0.8 }}
                           whileInView={{ opacity: 1, scale: 1 }}
-                          viewport={{ once: true }}
+                          // viewport={{ once: true }}
                           transition={{ 
                             duration: 0.3, 
                             delay: (index * 0.1) + (techIndex * 0.05) 
@@ -267,7 +267,7 @@ const Projects = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          // viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-center mt-16"
         >

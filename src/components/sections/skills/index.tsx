@@ -84,7 +84,7 @@ const Skills = () => {
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        // viewport={{ once: true }}
         transition={{ duration: 0.6, delay: index * 0.2 }}
         className="mb-12 last:mb-0"
       >
@@ -145,7 +145,7 @@ const Skills = () => {
                 key={skill.name}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
+                // viewport={{ once: true }}
                 transition={{ 
                   duration: 0.4, 
                   delay: (index * 0.1) + (skillIndex * 0.05) 
@@ -208,7 +208,7 @@ const Skills = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          // viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
@@ -231,7 +231,7 @@ const Skills = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          // viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mt-20 text-center"
         >
@@ -272,7 +272,7 @@ const Skills = () => {
                   className="group relative overflow-hidden rounded-xl bg-card/50 p-6 backdrop-blur-sm transition-all duration-300"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  // viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.7 + index * 0.1 }}
                   whileHover={{ y: -5 }}
                 >

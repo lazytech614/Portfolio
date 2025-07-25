@@ -56,9 +56,6 @@ const Header = () => {
                 {item.label}
               </Link>
             ))}
-            <Button variant="outline" size="sm">
-              Resume
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
