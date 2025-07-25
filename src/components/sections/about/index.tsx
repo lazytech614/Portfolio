@@ -262,60 +262,6 @@ const About = () => {
             </motion.div>
           </motion.div>
         </div>
-
-        {/* Stats Counter with Animated Gradient Borders */}
-        <motion.div 
-          className="flex flex-wrap justify-center gap-8"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-        >
-          {[
-            { label: 'Years Experience', value: 3, icon: Coffee },
-            { label: 'Projects Completed', value: 25, icon: Monitor },
-            { label: 'Technologies', value: 15, icon: Code2 }
-          ].map(({ label, value, icon: Icon }, index) => (
-            <motion.div
-              key={label}
-              className="group relative overflow-hidden rounded-xl bg-card/50 p-6 backdrop-blur-sm transition-all duration-300"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.7 + index * 0.1 }}
-            >
-              {/* Animated Gradient Border */}
-              <motion.div
-                className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                style={{
-                  background: 'linear-gradient(45deg, #34d399, #3b82f6, #8b5cf6, #f59e0b, #ef4444)',
-                  backgroundSize: '400% 400%',
-                }}
-                animate={{
-                  backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: 'linear',
-                }}
-              >
-                <div className="absolute inset-[2px] rounded-xl bg-card/90 backdrop-blur-sm" />
-              </motion.div>
-              
-              {/* Content */}
-              <div className="relative z-10 flex flex-col items-center text-center">
-                <Icon className="mb-3 h-8 w-8 text-primary transition-transform group-hover:scale-110" />
-                <span className="mb-2 text-4xl font-bold text-primary transition-colors group-hover:text-white">
-                  {value}+
-                </span>
-                <span className="text-sm text-muted-foreground transition-colors group-hover:text-gray-300">
-                  {label}
-                </span>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
       </div>
     </section>
   );

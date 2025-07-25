@@ -212,6 +212,50 @@ const Projects = () => {
                         </motion.div>
                       ))}
                     </div>
+
+                    {/* Action Buttons */}
+                    <div className="flex md:hidden items-center justify-between space-x-3 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
+                      {project.liveUrl && (
+                        <div>
+                          <Button 
+                            size="sm" 
+                            className="bg-white/90 text-black hover:bg-white transition-all duration-300 shadow-lg backdrop-blur-sm border border-white/20" 
+                            asChild
+                          >
+                            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                              <motion.div
+                                whileHover={{ rotate: 360 }}
+                                transition={{ type: "spring", stiffness: 400 }}
+                              >
+                                <ExternalLink size={16} className="mr-2" />
+                              </motion.div>
+                              Live Demo
+                            </a>
+                          </Button>
+                        </div>
+                      )}
+                      
+                      {project.githubUrl && (
+                        <div>
+                          <Button 
+                            size="sm" 
+                            variant="outline" 
+                            className="bg-black/90 text-white border-white/30 hover:bg-black hover:border-white transition-all duration-300 shadow-lg backdrop-blur-sm" 
+                            asChild
+                          >
+                            <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                              <motion.div
+                                whileHover={{ rotate: 360 }}
+                                transition={{ duration: 0.5, type: "spring", stiffness: 400 }}
+                              >
+                                <Github size={16} className="mr-2" />
+                              </motion.div>
+                              Code
+                            </a>
+                          </Button>
+                        </div>
+                      )}
+                    </div>
                   </motion.div>
                 </CardContent>
               </Card>
