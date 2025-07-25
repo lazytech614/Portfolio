@@ -5,11 +5,14 @@ import { ArrowDown, Github, Linkedin, Mail, Download, Sparkles, Code2, Palette, 
 import { Button } from '@/components/ui/button';
 import AnimatedText from '@/components/global/animated-text';
 import { useEffect, useState, useRef } from 'react';
+import { useLoading } from '@/contexts/loading-context';
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
   const containerRef = useRef<HTMLElement>(null);
+
+  const { isLoadingComplete } = useLoading(); 
   
   // Mouse tracking with spring physics
   const mouseX = useMotionValue(0);
@@ -78,6 +81,7 @@ const Hero = () => {
     hue: Math.random() * 60 + 180, // Blue to teal range
   }));
 
+  // Don't render hero animations until loading is complete, but keep the same structure
   return (
     <section 
       ref={containerRef}
@@ -88,6 +92,9 @@ const Hero = () => {
       <motion.div 
         className="absolute inset-0 -z-20"
         style={{ y: backgroundY }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: isLoadingComplete ? 1 : 0 }}
+        transition={{ duration: 0.5 }}
       >
         {/* Animated grid lines */}
         <svg className="absolute inset-0 w-full h-full opacity-10">
@@ -99,7 +106,7 @@ const Hero = () => {
                 stroke="currentColor"
                 strokeWidth="1"
                 initial={{ pathLength: 0 }}
-                animate={{ pathLength: 1 }}
+                animate={{ pathLength: isLoadingComplete ? 1 : 0 }}
                 transition={{ duration: 2, ease: "easeInOut" }}
               />
             </pattern>
@@ -118,11 +125,12 @@ const Hero = () => {
               x: useTransform(smoothMouseX, [-100, 100], [-i * 0.5, i * 0.5]),
               y: useTransform(smoothMouseY, [-100, 100], [-i * 0.3, i * 0.3]),
             }}
-            animate={{
+            initial={{ opacity: 0 }}
+            animate={isLoadingComplete ? {
               y: [0, -30, 0],
               opacity: [0, 1, 0],
               scale: [0, 1, 0],
-            }}
+            } : { opacity: 0 }}
             transition={{
               duration: Math.random() * 5 + 3,
               repeat: Infinity,
@@ -144,15 +152,18 @@ const Hero = () => {
             x: useTransform(smoothMouseX, [-100, 100], [-20 - index * 2, 20 + index * 2]),
             y: useTransform(smoothMouseY, [-100, 100], [-15 - index * 1.5, 15 + index * 1.5]),
           }}
-          animate={{
+          initial={{ opacity: 0, scale: 0 }}
+          animate={isLoadingComplete ? {
+            opacity: 1,
+            scale: 1,
             y: [0, -20, 0],
             rotate: [0, 360],
-            scale: [1, 1.1, 1],
-          }}
+          } : { opacity: 0, scale: 0 }}
           transition={{
+            opacity: { duration: 0.5, delay: delay + 0.5 },
+            scale: { duration: 0.5, delay: delay + 0.5 },
             y: { duration: 4 + index, repeat: Infinity, ease: "easeInOut" },
             rotate: { duration: 20 + index * 5, repeat: Infinity, ease: "linear" },
-            scale: { duration: 3 + index, repeat: Infinity, ease: "easeInOut", delay },
           }}
         >
           <Icon size={size} />
@@ -163,15 +174,18 @@ const Hero = () => {
       <motion.div 
         className="container mx-auto px-6 py-28 relative z-10"
         style={{ y: textY }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: isLoadingComplete ? 1 : 0 }}
+        transition={{ duration: 0.5, delay: isLoadingComplete ? 0.5 : 0 }}
       >
         <div className="max-w-5xl mx-auto text-center">
           {/* Animated Status Badge */}
           <motion.div
             initial={{ opacity: 0, scale: 0, y: -50 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
+            animate={isLoadingComplete ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0, scale: 0, y: -50 }}
             transition={{ 
               duration: 1.2, 
-              delay: 0.3,
+              delay: isLoadingComplete ? 0.3 : 0,
               type: "spring",
               stiffness: 200,
               damping: 20
@@ -184,10 +198,10 @@ const Hero = () => {
             }}
           >
             <motion.div
-              animate={{ 
+              animate={isLoadingComplete ? { 
                 rotate: [0, 360],
                 scale: [1, 1.2, 1]
-              }}
+              } : {}}
               transition={{ 
                 rotate: { duration: 4, repeat: Infinity, ease: "linear" },
                 scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
@@ -198,7 +212,7 @@ const Hero = () => {
             </motion.div>
             <span className="group-hover:text-primary transition-colors">Available for freelance work</span>
             <motion.div
-              animate={{ x: [0, 5, 0] }}
+              animate={isLoadingComplete ? { x: [0, 5, 0] } : {}}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
               className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity"
             >
@@ -209,8 +223,8 @@ const Hero = () => {
           {/* Main Heading with Stagger Animation */}
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+            animate={{ opacity: isLoadingComplete ? 1 : 0 }}
+            transition={{ duration: 0.8, delay: isLoadingComplete ? 0.5 : 0 }}
             className="mb-12"
           >
             <motion.h1
@@ -221,8 +235,8 @@ const Hero = () => {
             >
               <motion.span
                 initial={{ opacity: 0, y: 100 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.7, ease: "easeOut" }}
+                animate={isLoadingComplete ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+                transition={{ duration: 1, delay: isLoadingComplete ? 0.7 : 0, ease: "easeOut" }}
                 className="mr-3"
               >
                 Hi, I&apos;m
@@ -230,8 +244,8 @@ const Hero = () => {
               <motion.span
                 className="gradient-text relative"
                 initial={{ opacity: 0, y: 100 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.9, ease: "easeOut" }}
+                animate={isLoadingComplete ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+                transition={{ duration: 1, delay: isLoadingComplete ? 0.9 : 0, ease: "easeOut" }}
               >
                 <AnimatedText text="Rupanjan" />
                 
@@ -239,8 +253,8 @@ const Hero = () => {
                 <motion.div
                   className="absolute -bottom-4 left-0 h-2 bg-gradient-to-r from-primary via-blue-500 to-purple-500 rounded-full"
                   initial={{ width: 0, opacity: 0 }}
-                  animate={{ width: "100%", opacity: 1 }}
-                  transition={{ duration: 1.5, delay: 2 }}
+                  animate={isLoadingComplete ? { width: "100%", opacity: 1 } : { width: 0, opacity: 0 }}
+                  transition={{ duration: 1.5, delay: isLoadingComplete ? 2 : 0 }}
                 />
                 
                 {/* Floating sparkles */}
@@ -252,15 +266,15 @@ const Hero = () => {
                       top: `${-20 + i * 10}%`,
                       right: `${-10 + i * 15}%`,
                     }}
-                    animate={{
+                    animate={isLoadingComplete ? {
                       y: [0, -10, 0],
                       opacity: [0, 1, 0],
                       rotate: [0, 180, 360],
-                    }}
+                    } : { opacity: 0 }}
                     transition={{
                       duration: 3,
                       repeat: Infinity,
-                      delay: i * 0.5 + 2.5,
+                      delay: isLoadingComplete ? i * 0.5 + 2.5 : 0,
                       ease: "easeInOut",
                     }}
                   >
@@ -274,14 +288,14 @@ const Hero = () => {
             <motion.div
               className="overflow-hidden mb-8"
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.5 }}
+              animate={{ opacity: isLoadingComplete ? 1 : 0 }}
+              transition={{ delay: isLoadingComplete ? 1.5 : 0 }}
             >
               <motion.h2 
                 className="text-3xl md:text-5xl lg:text-6xl text-muted-foreground font-light"
                 initial={{ y: 100 }}
-                animate={{ y: 0 }}
-                transition={{ duration: 1, delay: 1.7, ease: "easeOut" }}
+                animate={isLoadingComplete ? { y: 0 } : { y: 100 }}
+                transition={{ duration: 1, delay: isLoadingComplete ? 1.7 : 0, ease: "easeOut" }}
                 style={{
                   x: useTransform(smoothMouseX, [-100, 100], [3, -3]),
                 }}
@@ -293,8 +307,8 @@ const Hero = () => {
             <motion.p 
               className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed"
               initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 2 }}
+              animate={isLoadingComplete ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              transition={{ duration: 0.8, delay: isLoadingComplete ? 2 : 0 }}
               style={{
                 x: useTransform(smoothMouseX, [-100, 100], [2, -2]),
               }}
@@ -307,8 +321,8 @@ const Hero = () => {
           {/* Interactive CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 2.3 }}
+            animate={isLoadingComplete ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            transition={{ duration: 0.8, delay: isLoadingComplete ? 2.3 : 0 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-20"
           >
             <motion.div 
@@ -325,12 +339,12 @@ const Hero = () => {
               >
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-r from-primary via-blue-500 to-purple-500 opacity-0 group-hover:opacity-100"
-                  animate={{ x: ["-100%", "100%"] }}
+                  animate={isLoadingComplete ? { x: ["-100%", "100%"] } : {}}
                   transition={{ duration: 2, repeat: Infinity, ease: "linear", repeatDelay: 3 }}
                 />
                 <span className="relative z-10">Explore My Work</span>
                 <motion.div
-                  animate={{ x: [0, 5, 0] }}
+                  animate={isLoadingComplete ? { x: [0, 5, 0] } : {}}
                   transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                   className="relative z-10 ml-2"
                 >
@@ -360,8 +374,8 @@ const Hero = () => {
           {/* Enhanced Social Links */}
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 2.5 }}
+            animate={{ opacity: isLoadingComplete ? 1 : 0 }}
+            transition={{ duration: 0.8, delay: isLoadingComplete ? 2.5 : 0 }}
             className="flex items-center justify-center space-x-10 mb-20"
           >
             {socialLinks.map((social, index) => (
@@ -378,10 +392,10 @@ const Hero = () => {
                 }}
                 whileTap={{ scale: 0.9 }}
                 initial={{ opacity: 0, y: 30, scale: 0.5 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
+                animate={isLoadingComplete ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 30, scale: 0.5 }}
                 transition={{ 
                   duration: 0.6, 
-                  delay: 2.7 + index * 0.1,
+                  delay: isLoadingComplete ? 2.7 + index * 0.1 : 0,
                   type: "spring",
                   stiffness: 200
                 }}
@@ -393,7 +407,7 @@ const Hero = () => {
                 {/* Animated background */}
                 <motion.div
                   className="absolute inset-0 -m-4 rounded-2xl bg-card/20 backdrop-blur-xl border border-primary/20 opacity-0 group-hover:opacity-100"
-                  animate={{ rotate: [0, 360] }}
+                  animate={isLoadingComplete ? { rotate: [0, 360] } : {}}
                   transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
                 />
                 
@@ -418,17 +432,17 @@ const Hero = () => {
           {/* Animated Scroll Indicator */}
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 3 }}
+            animate={{ opacity: isLoadingComplete ? 1 : 0 }}
+            transition={{ duration: 0.8, delay: isLoadingComplete ? 3 : 0 }}
             className="relative"
             style={{
               y: useTransform(smoothMouseY, [-100, 100], [-3, 3]),
             }}
           >
             <motion.div
-              animate={{ 
+              animate={isLoadingComplete ? { 
                 y: [0, 20, 0],
-              }}
+              } : {}}
               transition={{ 
                 duration: 3, 
                 repeat: Infinity, 
@@ -439,7 +453,7 @@ const Hero = () => {
             >
               <motion.span 
                 className="text-sm text-muted-foreground mb-4 group-hover:text-primary transition-colors"
-                animate={{ opacity: [0.5, 1, 0.5] }}
+                animate={isLoadingComplete ? { opacity: [0.5, 1, 0.5] } : {}}
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
               >
                 Scroll to discover more
@@ -451,7 +465,7 @@ const Hero = () => {
               >
                 <motion.div
                   className="w-1 h-4 bg-muted-foreground group-hover:bg-primary rounded-full mt-3 transition-colors"
-                  animate={{ y: [0, 20, 0] }}
+                  animate={isLoadingComplete ? { y: [0, 20, 0] } : {}}
                   transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                 />
               </motion.div>

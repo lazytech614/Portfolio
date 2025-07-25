@@ -5,9 +5,11 @@ import { ArrowDown, Download, Github, Linkedin, Mail, MapPin } from 'lucide-reac
 import { Button } from '../../ui/button'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import { useLoading } from '@/contexts/loading-context'
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const { isLoadingComplete } = useLoading();
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -33,6 +35,18 @@ const Hero = () => {
     }, 3000)
     return () => clearInterval(interval)
   }, [])
+
+  // Don't render hero animations until loading is complete
+  if (!isLoadingComplete) {
+    return (
+      <section className="min-h-screen flex items-center justify-center">
+        {/* Static content without animations */}
+        <div className="opacity-0">
+          {/* Your hero content here but invisible */}
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-900 dark:to-blue-900 overflow-hidden">
