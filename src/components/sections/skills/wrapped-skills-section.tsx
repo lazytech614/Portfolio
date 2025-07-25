@@ -1,45 +1,7 @@
 import { motion, Variants } from 'framer-motion';
 import Image from 'next/image';
+import { TECHNOLOGIES as technologies } from '@/constants/skills';
 
-/* ------------------------------------------------------------------ */
-/*  ICON  PATHS                                                       */
-/* ------------------------------------------------------------------ */
-const techIcons: Record<string, string> = {
-  HTML: '/icons/html5.svg',
-  CSS: '/icons/css3.svg',
-  JavaScript: '/icons/javascript.svg',
-  'Tailwind CSS': '/icons/tailwind.svg',
-  'React': '/icons/react.svg',
-  TypeScript: '/icons/typescript.svg',
-  'Express JS': '/icons/express.svg',
-  'Node JS': '/icons/nodejs.svg',
-  JWT: '/icons/jwt.svg',
-  Docker: '/icons/docker.svg',
-  MongoDB: '/icons/mongodb.svg',
-  PostgreSQL: '/icons/postgresql.svg',
-};
-
-/* ------------------------------------------------------------------ */
-/*  TECHNOLOGY LIST                                                  */
-/* ------------------------------------------------------------------ */
-const technologies = [
-  { name: 'HTML', icon: techIcons['HTML'] },
-  { name: 'CSS', icon: techIcons['CSS'] },
-  { name: 'JavaScript', icon: techIcons['JavaScript'] },
-  { name: 'Tailwind CSS', icon: techIcons['Tailwind CSS'] },
-  { name: 'React', icon: techIcons['React'] },
-  { name: 'TypeScript', icon: techIcons['TypeScript'] },
-  { name: 'Express JS', icon: techIcons['Express JS'] },
-  { name: 'Node JS', icon: techIcons['Node JS'] },
-  { name: 'JWT', icon: techIcons['JWT'] },
-  { name: 'Docker', icon: techIcons['Docker'] },
-  { name: 'MongoDB', icon: techIcons['MongoDB'] },
-  { name: 'PostgreSQL', icon: techIcons['PostgreSQL'] },
-];
-
-/* ------------------------------------------------------------------ */
-/*  GRADIENT PALETTE (round-robin)                                   */
-/* ------------------------------------------------------------------ */
 const gradients: [string, string][] = [
   ['#f97316', '#d946ef'],
   ['#3b82f6', '#06b6d4'],
