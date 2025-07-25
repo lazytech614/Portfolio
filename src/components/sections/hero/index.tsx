@@ -42,6 +42,9 @@ const Hero = () => {
           <ScrollIndicator loadingDone={isLoadingComplete} />
         </div>
       </motion.div>
+
+      {/* Gradient fade to next section */}
+      <div className="pointer-events-none absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-transparent to-muted/30 z-20" />
     </section>
   );
 };

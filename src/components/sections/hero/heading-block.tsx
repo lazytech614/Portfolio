@@ -3,6 +3,8 @@ import { motion, useTransform } from 'framer-motion';
 import { Sparkles } from 'lucide-react';
 import AnimatedText from '@/components/global/animated-text';
 import { useMouseParallax } from './hooks/useMouseParallax';
+// import Typewriter from '@/components/global/type-writer/type-writer';
+import Typewriter from 'typewriter-effect';
 
 const HeadingBlock = ({ loadingDone }: { loadingDone: boolean }) => {
   const { smoothX, smoothY } = useMouseParallax();
@@ -35,7 +37,7 @@ const HeadingBlock = ({ loadingDone }: { loadingDone: boolean }) => {
           animate={loadingDone ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
           transition={{ duration: 1, delay: loadingDone ? 0.9 : 0, ease: "easeOut" }}
         >
-          <AnimatedText text="Rupanjan" />
+          <AnimatedText text="Rupanjan" className='' />
           
           {/* Animated underline */}
           <motion.div
@@ -88,7 +90,13 @@ const HeadingBlock = ({ loadingDone }: { loadingDone: boolean }) => {
             x: useTransform(smoothX, [-100, 100], [3, -3]),
           }}
         >
-          Full Stack Developer
+          <Typewriter
+            options={{
+              strings: ['Frontend Developer', 'Backend Developer', 'Full Stack Developer'],
+              autoStart: true,
+              loop: true,
+            }}
+          />
         </motion.h2>
       </motion.div>
 

@@ -434,3 +434,46 @@
   -webkit-backdrop-filter: blur(24px);
 }
 
+
+
+
+.scroll-progress-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0.1rem;
+  z-index: 1000;
+  transform-origin: left;
+
+  /* Animated gradient background */
+  background: linear-gradient(90deg, #06b6d4, #6366f1, #f472b6, #06b6d4);
+  background-size: 200% 100%;
+  animation: gradient-move 3s linear infinite;
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.typewriter {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}

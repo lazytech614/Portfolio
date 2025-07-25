@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const AnimatedLogo = () => {
   return (
-    <Link href="#home" scroll={false}>
+          <Link href="#home" scroll={false}>
             <motion.svg
               className="h-[20px] sm:h-[30px] md:h-[40px]"
               viewBox="0 0 261 222"

@@ -25,7 +25,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <LoadingProvider>
           <Loading />
-          <ScrollProgress />
+          {/* <ScrollProgress /> */}
           <Header />
           <main>{children}</main>
           <Toaster />

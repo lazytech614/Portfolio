@@ -7,6 +7,7 @@ import Navigation from '../header/navigation';
 import MobileMenuToggle from '../header/mobile-menu-toggle';
 import { useScrollDetection } from '../header/hooks/useScrollDetection';
 import { NAV_ITEMS } from '@/constants/navigation';
+import ScrollProgress from '@/components/global/scroll-progress';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,6 +31,7 @@ const Header = () => {
           : 'bg-transparent'
       }`}
     >
+      <ScrollProgress />
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <AnimatedLogo />

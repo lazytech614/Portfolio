@@ -7,7 +7,7 @@ import { PROJECTS_SECTION_CONFIG, ANIMATION_VARIANTS } from '@/constants/project
 
 const Projects = () => {
   return (
-    <section id="projects" className="section-padding bg-muted/30">
+    <section id="projects" className="section-padding bg-muted/30 relative">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <motion.div
@@ -44,6 +44,9 @@ const Projects = () => {
         {/* View All Button */}
         <ViewAllButton githubUrl={PROJECTS_SECTION_CONFIG.githubUrl} />
       </div>
+
+      {/* Gradient fade to next section */}
+      <div className="pointer-events-none absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-[#121212] to-[#0A0A0A] z-20" />
     </section>
   );
 };

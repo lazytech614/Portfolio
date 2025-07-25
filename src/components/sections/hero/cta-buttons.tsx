@@ -11,6 +11,10 @@ const CTAButtons = ({ loadingDone }: { loadingDone: boolean }) => {
     document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const handleDownloadCvClick = () => {
+    window.open("/Rupanjan_De_Updated_Resume.pdf", "_blank");
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -55,7 +59,8 @@ const CTAButtons = ({ loadingDone }: { loadingDone: boolean }) => {
           x: useTransform(smoothX, [-100, 100], [2, -2]),
         }}
       >
-        <Button 
+        <Button
+          onClick={handleDownloadCvClick}
           variant="outline" 
           size="lg" 
           className="px-10 py-7 text-lg font-medium border-2 border-primary/30 hover:border-primary hover:bg-primary/10 backdrop-blur-sm"

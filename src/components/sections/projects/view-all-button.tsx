@@ -13,7 +13,7 @@ const ViewAllButton = ({ githubUrl }: ViewAllButtonProps) => {
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.4 }}
-      className="text-center mt-16"
+      className="relative text-center mt-16 z-[50]"
     >
       <motion.div
         whileHover={{ scale: 1.05 }}

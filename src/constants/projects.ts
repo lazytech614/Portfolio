@@ -1,7 +1,7 @@
 export const PROJECTS_SECTION_CONFIG = {
   title: "Featured Projects",
   subtitle: "Here are some of my recent projects that showcase my skills and passion for creating exceptional web experiences.",
-  githubUrl: "https://github.com/lazytech614"
+  githubUrl: "https://github.com/lazytech614?tab=repositories"
 };
 
 export const ANIMATION_VARIANTS = {

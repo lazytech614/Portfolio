@@ -44,7 +44,7 @@ const AnimatedText = ({ text, className = '' }: AnimatedTextProps) => {
 
   return (
     <motion.div
-      style={{ overflow: 'hidden', display: 'inline-block' }}
+      style={{ overflow: 'hidden' }}
       variants={container}
       initial="hidden"
       animate="visible"
